@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syv2uni-creator.github.io/monetizestack/sitemap.xml
