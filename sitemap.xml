@@ -1,44 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/what-is-website-rpm.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/about.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-much-money-can-a-website-make.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/contact.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-many-visitors-to-make-100.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-many-visitors-to-make-1000.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/website-revenue-calculator/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-to-increase-website-rpm.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-website-ad-revenue-works.html</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/ad-revenue-calculator/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/tools/</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/affiliate-revenue-calculator/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/index.html</loc>
+    </url>
 
-  <url>
-    <loc>https://syv2uni-creator.github.io/monetizestack/tools/ad-revenue-calculator/</loc>
-  </url>
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/what-is-website-rpm.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-much-money-can-a-website-make.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-many-visitors-to-make-100.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-many-visitors-to-make-1000.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-to-increase-website-rpm.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-website-ad-revenue-works.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-to-calculate-affiliate-revenue.html</loc>
+    </url>
 
 </urlset>
