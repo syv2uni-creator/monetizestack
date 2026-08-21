@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Affiliate Revenue Calculator | MonetizeStack</title>
+
+    <meta name="description"
+          content="Free affiliate revenue calculator. Estimate potential monthly affiliate revenue using clicks, conversion rate and average commission.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111827;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(900px, 92%);
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+            background: #ffffff;
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .back {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back:hover {
+            color: #2563eb;
+        }
+
+        main {
+            padding: 75px 0;
+        }
+
+        .eyebrow {
+            margin-bottom: 14px;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            margin-bottom: 18px;
+            font-size: clamp(40px, 6vw, 60px);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin-bottom: 40px;
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .calculator {
+            padding: 32px;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .field {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .hint {
+            margin-top: 6px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 28px;
+            border-radius: 12px;
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .result-label {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .result-value {
+            margin: 8px 0;
+            color: #111827;
+            font-size: 46px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+        }
+
+        .result-details {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .info {
+            margin-top: 50px;
+        }
+
+        .info h2 {
+            margin-bottom: 14px;
+            font-size: 30px;
+        }
+
+        .info p {
+            margin-bottom: 18px;
+            color: #4b5563;
+        }
+
+        .formula {
+            margin: 25px 0;
+            padding: 20px;
+            border-left: 4px solid #2563eb;
+            background: #f8fafc;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .info a {
+            color: #2563eb;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            main {
+                padding: 55px 0;
+            }
+
+            .calculator {
+                padding: 22px;
+            }
+
+            .result-value {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="../../index.html" class="logo">
+                Monetize<span>Stack</span>
+            </a>
+
+            <a href="../index.html" class="back">
+                ← Back to Tools
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Free Calculator
+        </div>
+
+        <h1>
+            Affiliate Revenue Calculator
+        </h1>
+
+        <p class="intro">
+            Estimate your potential monthly affiliate revenue
+            using affiliate clicks, conversion rate and average
+            commission per conversion.
+        </p>
+
+
+        <div class="calculator">
+
+
+            <div class="field">
+
+                <label for="clicks">
+                    Monthly Affiliate Clicks
+                </label>
+
+                <input
+                    type="number"
+                    id="clicks"
+                    value="1000"
+                    min="0"
+                    step="1"
+                >
+
+                <div class="hint">
+                    Example: 1,000 monthly affiliate clicks
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="conversion">
+                    Conversion Rate (%)
+                </label>
+
+                <input
+                    type="number"
+                    id="conversion"
+                    value="3"
+                    min="0"
+                    max="100"
+                    step="0.1"
+                >
+
+                <div class="hint">
+                    Example: 3% of clicks result in a conversion
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="commission">
+                    Average Commission ($)
+                </label>
+
+                <input
+                    type="number"
+                    id="commission"
+                    value="25"
+                    min="0"
+                    step="0.01"
+                >
+
+                <div class="hint">
+                    Average affiliate commission per conversion
+                </div>
+
+            </div>
+
+
+            <button onclick="calculateAffiliateRevenue()">
+                Calculate Affiliate Revenue
+            </button>
+
+
+            <div class="result" id="result">
+
+                <div class="result-label">
+                    Estimated Monthly Affiliate Revenue
+                </div>
+
+                <div class="result-value" id="revenue">
+                    $0.00
+                </div>
+
+                <div class="result-details" id="details">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="info">
+
+            <h2>
+                How the calculation works
+            </h2>
+
+            <p>
+                Affiliate revenue depends on the number of
+                affiliate clicks, the percentage of clicks that
+                convert and the average commission earned from
+                each conversion.
+            </p>
+
+            <div class="formula">
+
+                Estimated Revenue =
+                Affiliate Clicks × Conversion Rate ×
+                Average Commission
+
+            </div>
+
+            <p>
+                For example, 1,000 monthly clicks with a 3%
+                conversion rate would produce approximately
+                30 conversions. At an average $25 commission,
+                the estimated revenue would be $750 per month.
+            </p>
+
+            <p>
+                This calculator provides an estimate. Actual
+                affiliate revenue can vary depending on product
+                demand, traffic quality, commission structures,
+                refunds and conversion performance.
+            </p>
+
+            <p>
+                Explore our other
+                <a href="../index.html">
+                    free website monetization tools
+                </a>
+                to understand your website's revenue potential.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        © 2026 MonetizeStack. Turn Website Traffic Into Revenue.
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function calculateAffiliateRevenue() {
+
+    const clicks =
+        parseFloat(document.getElementById("clicks").value) || 0;
+
+    const conversion =
+        parseFloat(document.getElementById("conversion").value) || 0;
+
+    const commission =
+        parseFloat(document.getElementById("commission").value) || 0;
+
+    const conversions =
+        clicks * (conversion / 100);
+
+    const revenue =
+        conversions * commission;
+
+    document.getElementById("revenue").textContent =
+        "$" + revenue.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+
+    document.getElementById("details").textContent =
+        Math.round(conversions).toLocaleString("en-US") +
+        " estimated monthly conversions at $" +
+        commission.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }) +
+        " average commission";
+
+    document.getElementById("result").style.display = "block";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
