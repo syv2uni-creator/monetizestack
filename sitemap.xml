@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
@@ -15,27 +14,11 @@
     </url>
 
     <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/tools/index.html</loc>
-    </url>
-
-    <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/tools/website-revenue-calculator/index.html</loc>
-    </url>
-
-    <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/index.html</loc>
-    </url>
-
-    <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/tools/ad-revenue-calculator/index.html</loc>
-    </url>
-
-    <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/tools/affiliate-revenue-calculator/index.html</loc>
-    </url>
-
-    <url>
         <loc>https://syv2uni-creator.github.io/monetizestack/articles/index.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/index.html</loc>
     </url>
 
     <url>
@@ -63,7 +46,19 @@
     </url>
 
     <url>
-        <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-to-calculate-affiliate-revenue.html</loc>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/website-revenue-calculator/index.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/index.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/ad-revenue-calculator/index.html</loc>
+    </url>
+
+    <url>
+        <loc>https://syv2uni-creator.github.io/monetizestack/tools/affiliate-revenue-calculator/index.html</loc>
     </url>
 
 </urlset>
