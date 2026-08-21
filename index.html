@@ -1,18 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+    <meta name="google-site-verification" content="Hwv6QoaVUQ8Aj7dx6rEuBzZ0pj3xnHPe-UBg1lumi8U">
 
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Website Revenue Calculator | MonetizeStack</title>
+    <title>MonetizeStack | Turn Website Traffic Into Revenue</title>
 
     <meta name="description"
-          content="Free website revenue calculator. Estimate monthly website revenue using visitors, pages per visitor and RPM.">
+          content="MonetizeStack helps website owners turn traffic into revenue with practical guides, free calculators and website monetization strategies.">
 
     <style>
 
@@ -30,12 +31,13 @@
         }
 
         .container {
-            width: min(900px, 92%);
+            width: min(1100px, 92%);
             margin: 0 auto;
         }
 
         header {
             border-bottom: 1px solid #e5e7eb;
+            background: #ffffff;
         }
 
         nav {
@@ -43,6 +45,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 30px;
         }
 
         .logo {
@@ -56,23 +59,34 @@
             color: #2563eb;
         }
 
-        .back {
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
             color: #4b5563;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
         }
 
-        .back:hover {
+        .nav-links a:hover {
             color: #2563eb;
         }
 
-        main {
-            padding: 75px 0;
+        .hero {
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
         }
 
         .eyebrow {
-            margin-bottom: 14px;
+            display: block;
+            margin-bottom: 15px;
             color: #2563eb;
             font-size: 13px;
             font-weight: 700;
@@ -81,124 +95,168 @@
         }
 
         h1 {
-            margin-bottom: 18px;
-            font-size: clamp(40px, 6vw, 60px);
-            line-height: 1.05;
-            letter-spacing: -0.04em;
+            max-width: 850px;
+            margin-bottom: 25px;
+            font-size: clamp(46px, 7vw, 76px);
+            line-height: 1.02;
+            letter-spacing: -0.05em;
         }
 
-        .intro {
+        .hero p {
             max-width: 700px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #6b7280;
-            font-size: 18px;
+            font-size: 20px;
         }
 
-        .calculator {
-            padding: 32px;
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
-            background: #ffffff;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
-        .field {
-            margin-bottom: 24px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
+        .button {
+            display: inline-block;
+            padding: 13px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
             font-weight: 700;
         }
 
-        input {
-            width: 100%;
-            padding: 14px 15px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .hint {
-            margin-top: 6px;
-            color: #6b7280;
-            font-size: 13px;
-        }
-
-        button {
-            width: 100%;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 8px;
+        .button-primary {
             background: #2563eb;
             color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
         }
 
-        button:hover {
+        .button-primary:hover {
             background: #1d4ed8;
         }
 
-        .result {
-            display: none;
-            margin-top: 30px;
-            padding: 28px;
-            border-radius: 12px;
-            background: #f8fafc;
-            text-align: center;
+        .button-secondary {
+            border: 1px solid #d1d5db;
+            color: #111827;
+            background: #ffffff;
         }
 
-        .result-label {
+        .button-secondary:hover {
+            background: #f8fafc;
+        }
+
+        section {
+            padding: 80px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            margin-bottom: 12px;
+            font-size: 38px;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+        }
+
+        .section-heading p {
             color: #6b7280;
+            font-size: 17px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            padding: 28px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            background: #ffffff;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            color: #6b7280;
+        }
+
+        .card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 14px;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .article-card {
+            max-width: 760px;
+        }
+
+        .article-label {
+            margin-bottom: 10px;
+            color: #2563eb;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
         }
 
-        .result-value {
-            margin: 8px 0;
-            color: #111827;
-            font-size: 46px;
-            font-weight: 800;
-            letter-spacing: -0.04em;
+        .article-card h3 {
+            font-size: 28px;
         }
 
-        .result-details {
-            color: #6b7280;
-            font-size: 14px;
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
         }
 
-        .info {
-            margin-top: 50px;
-        }
-
-        .info h2 {
-            margin-bottom: 14px;
-            font-size: 30px;
-        }
-
-        .info p {
-            margin-bottom: 18px;
-            color: #4b5563;
-        }
-
-        .info a {
-            color: #2563eb;
-            font-weight: 700;
+        .topic {
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
             text-decoration: none;
+            color: #111827;
+            font-weight: 700;
         }
 
-        .info a:hover {
-            text-decoration: underline;
+        .topic:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .final-cta {
+            padding: 90px 0;
+            background: #f8fafc;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .final-cta h2 {
+            margin-bottom: 15px;
+            font-size: 40px;
+            letter-spacing: -0.03em;
+        }
+
+        .final-cta p {
+            max-width: 650px;
+            margin-bottom: 25px;
+            color: #6b7280;
+            font-size: 17px;
         }
 
         footer {
@@ -208,18 +266,38 @@
             font-size: 14px;
         }
 
+        @media (max-width: 850px) {
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
         @media (max-width: 600px) {
 
-            main {
-                padding: 55px 0;
+            .hero {
+                padding: 65px 0;
             }
 
-            .calculator {
-                padding: 22px;
+            section {
+                padding: 60px 0;
             }
 
-            .result-value {
-                font-size: 38px;
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 46px;
             }
 
         }
@@ -228,9 +306,7 @@
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -238,13 +314,31 @@
 
         <nav>
 
-            <a href="../index.html" class="logo">
+            <a href="index.html" class="logo">
                 Monetize<span>Stack</span>
             </a>
 
-            <a href="../index.html" class="back">
-                ← Back to MonetizeStack
-            </a>
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="tools/index.html">
+                        Tools
+                    </a>
+                </li>
+
+                <li>
+                    <a href="articles/what-is-website-rpm.html">
+                        Guides
+                    </a>
+                </li>
+
+            </ul>
 
         </nav>
 
@@ -252,149 +346,238 @@
 
 </header>
 
-
 <main>
 
-    <div class="container">
+    <section class="hero">
 
-        <div class="eyebrow">
-            Free Calculator
-        </div>
+        <div class="container">
 
-        <h1>
-            Website Revenue Calculator
-        </h1>
+            <div class="hero-content">
 
-        <p class="intro">
-            Estimate your website's potential monthly revenue
-            using monthly visitors, pages per visitor and
-            estimated RPM.
-        </p>
+                <span class="eyebrow">
+                    Website Monetization
+                </span>
 
+                <h1>
+                    Turn Website Traffic Into Revenue.
+                </h1>
 
-        <div class="calculator">
+                <p>
+                    Practical guides and free tools for website owners
+                    who want to understand traffic, improve monetization
+                    and build sustainable online revenue.
+                </p>
 
-            <div class="field">
+                <div class="hero-buttons">
 
-                <label for="visitors">
-                    Monthly Visitors
-                </label>
+                    <a
+                        href="tools/website-revenue-calculator/index.html"
+                        class="button button-primary"
+                    >
+                        Explore Free Tools
+                    </a>
 
-                <input
-                    type="number"
-                    id="visitors"
-                    value="25000"
-                    min="0"
-                >
+                    <a
+                        href="articles/what-is-website-rpm.html"
+                        class="button button-secondary"
+                    >
+                        Read the Guides
+                    </a>
 
-                <div class="hint">
-                    Example: 25,000 monthly visitors
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="pages">
-                    Pages Per Visitor
-                </label>
-
-                <input
-                    type="number"
-                    id="pages"
-                    value="2.2"
-                    min="0"
-                    step="0.1"
-                >
-
-                <div class="hint">
-                    Example: 2.2 pages per visitor
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="rpm">
-                    Estimated RPM ($)
-                </label>
-
-                <input
-                    type="number"
-                    id="rpm"
-                    value="12"
-                    min="0"
-                    step="0.01"
-                >
-
-                <div class="hint">
-                    Revenue per 1,000 pageviews
-                </div>
-
-            </div>
-
-
-            <button onclick="calculateRevenue()">
-                Calculate Revenue
-            </button>
-
-
-            <div class="result" id="result">
-
-                <div class="result-label">
-                    Estimated Monthly Revenue
-                </div>
-
-                <div class="result-value" id="revenue">
-                    $0
-                </div>
-
-                <div class="result-details" id="details">
                 </div>
 
             </div>
 
         </div>
 
+    </section>
 
-        <div class="info">
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Free Website Monetization Tools
+                </h2>
+
+                <p>
+                    Use simple calculators to understand your
+                    website's revenue potential and monetization
+                    performance.
+                </p>
+
+            </div>
+
+            <div class="tools-grid">
+
+                <div class="card">
+
+                    <h3>
+                        Website Revenue Calculator
+                    </h3>
+
+                    <p>
+                        Estimate monthly revenue using visitors,
+                        pages per visitor and RPM.
+                    </p>
+
+                    <a href="tools/website-revenue-calculator/index.html">
+                        Calculate Revenue →
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>
+                        RPM Calculator
+                    </h3>
+
+                    <p>
+                        Calculate revenue per 1,000 pageviews.
+                    </p>
+
+                    <a href="tools/rpm-calculator/index.html">
+                        Calculate RPM →
+                    </a>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>
+                        Ad Revenue Calculator
+                    </h3>
+
+                    <p>
+                        Estimate advertising revenue from
+                        pageviews and ad RPM.
+                    </p>
+
+                    <a href="tools/ad-revenue-calculator/index.html">
+                        Calculate Ad Revenue →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Latest Guide
+                </h2>
+
+                <p>
+                    Practical explanations of the metrics and
+                    strategies behind website monetization.
+                </p>
+
+            </div>
+
+            <div class="card article-card">
+
+                <div class="article-label">
+                    Website Monetization
+                </div>
+
+                <h3>
+                    What Is Website RPM?
+                </h3>
+
+                <p>
+                    Learn what RPM means, how to calculate it,
+                    what affects it and how website owners can
+                    improve their revenue per 1,000 pageviews.
+                </p>
+
+                <a href="articles/what-is-website-rpm.html">
+                    Read the Guide →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Explore MonetizeStack
+                </h2>
+
+                <p>
+                    Learn about the main ways website owners can
+                    turn traffic into revenue.
+                </p>
+
+            </div>
+
+            <div class="topics-grid">
+
+                <a href="#" class="topic">
+                    Monetization
+                </a>
+
+                <a href="#" class="topic">
+                    SEO & Traffic
+                </a>
+
+                <a href="#" class="topic">
+                    Affiliate Marketing
+                </a>
+
+                <a href="tools/index.html" class="topic">
+                    Free Tools
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="final-cta">
+
+        <div class="container">
 
             <h2>
-                How the calculation works
+                Know your numbers.
             </h2>
 
             <p>
-                Estimated monthly revenue is calculated by
-                multiplying monthly visitors by pages per visitor
-                to estimate monthly pageviews.
+                Start with the free MonetizeStack calculators
+                and understand what your website traffic could
+                be worth.
             </p>
 
-            <p>
-                Those pageviews are then divided by 1,000 and
-                multiplied by the estimated RPM.
-            </p>
-
-            <p>
-                For example, 25,000 visitors × 2.2 pages per visitor
-                produces 55,000 monthly pageviews. At a $12 RPM,
-                the estimated revenue would be $660 per month.
-            </p>
-
-            <p>
-                Learn more about this metric in our
-                <a href="../articles/what-is-website-rpm.html">
-                    Website RPM guide
-                </a>.
-            </p>
+            <a
+                href="tools/index.html"
+                class="button button-primary"
+            >
+                Explore the Tools →
+            </a>
 
         </div>
 
-    </div>
+    </section>
 
 </main>
-
 
 <footer>
 
@@ -405,43 +588,6 @@
     </div>
 
 </footer>
-
-
-<script>
-
-function calculateRevenue() {
-
-    const visitors =
-        parseFloat(document.getElementById("visitors").value) || 0;
-
-    const pages =
-        parseFloat(document.getElementById("pages").value) || 0;
-
-    const rpm =
-        parseFloat(document.getElementById("rpm").value) || 0;
-
-    const pageviews = visitors * pages;
-
-    const revenue = (pageviews / 1000) * rpm;
-
-    document.getElementById("revenue").textContent =
-        "$" + revenue.toLocaleString("en-US", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-
-    document.getElementById("details").textContent =
-        pageviews.toLocaleString("en-US") +
-        " estimated monthly pageviews at $" +
-        rpm.toLocaleString("en-US") +
-        " RPM";
-
-    document.getElementById("result").style.display = "block";
-
-}
-
-</script>
-
 
 </body>
 
