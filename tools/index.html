@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Revenue Calculator | MonetizeStack</title>
+
+    <meta name="description"
+          content="Estimate your website's monthly revenue based on visitors, pages per visitor and RPM with this free website revenue calculator.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111827;
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 0 auto;
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .back-link {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        main {
+            padding: 70px 0;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 58px);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .calculator {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 32px;
+            max-width: 700px;
+        }
+
+        .field {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .hint {
+            color: #6b7280;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        button {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 15px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 28px;
+            background: #f8fafc;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .result-label {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .result-value {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .result-details {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .explanation {
+            max-width: 700px;
+            margin-top: 60px;
+        }
+
+        .explanation h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .explanation p {
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        .formula {
+            background: #111827;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 40px 0;
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 50px 0;
+            }
+
+            .calculator {
+                padding: 22px;
+            }
+
+            .result-value {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="../index.html" class="logo">
+                Monetize<span>Stack</span>
+            </a>
+
+            <a href="../index.html" class="back-link">
+                ← Back to MonetizeStack
+            </a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="intro">
+
+            <span class="eyebrow">
+                Free Tool
+            </span>
+
+            <h1>
+                Website Revenue Calculator
+            </h1>
+
+            <p>
+                Estimate how much your website could earn based on
+                monthly visitors, pages per visitor and estimated RPM.
+            </p>
+
+        </div>
+
+
+        <div class="calculator">
+
+            <div class="field">
+
+                <label for="visitors">
+                    Monthly Visitors
+                </label>
+
+                <input
+                    type="number"
+                    id="visitors"
+                    value="25000"
+                    min="0"
+                >
+
+                <div class="hint">
+                    Example: 25,000 monthly visitors
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="pages">
+                    Pages Per Visitor
+                </label>
+
+                <input
+                    type="number"
+                    id="pages"
+                    value="2.2"
+                    min="0"
+                    step="0.1"
+                >
+
+                <div class="hint">
+                    Example: 2.2 pages per visitor
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="rpm">
+                    Page RPM ($)
+                </label>
+
+                <input
+                    type="number"
+                    id="rpm"
+                    value="12"
+                    min="0"
+                    step="0.01"
+                >
+
+                <div class="hint">
+                    Revenue per 1,000 pageviews
+                </div>
+
+            </div>
+
+
+            <button onclick="calculateRevenue()">
+                Calculate Revenue
+            </button>
+
+
+            <div class="result" id="result">
+
+                <div class="result-label">
+                    Estimated Monthly Revenue
+                </div>
+
+                <div class="result-value" id="revenue">
+                    $0
+                </div>
+
+                <div class="result-details" id="details"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="explanation">
+
+            <h2>
+                How does the calculation work?
+            </h2>
+
+            <p>
+                The calculator estimates your monthly pageviews first,
+                then applies your estimated Page RPM.
+            </p>
+
+            <div class="formula">
+                Monthly Revenue = (Visitors × Pages Per Visitor ÷ 1,000) × RPM
+            </div>
+
+            <p>
+                For example, 25,000 visitors viewing 2.2 pages each
+                produces approximately 55,000 monthly pageviews.
+                At a $12 RPM, the estimated monthly revenue would be
+                $660.
+            </p>
+
+            <p>
+                Actual revenue can vary significantly depending on
+                traffic source, audience location, device type,
+                ad placements, niche and monetization method.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        © 2026 MonetizeStack. Turn Website Traffic Into Revenue.
+    </div>
+</footer>
+
+
+<script>
+
+function calculateRevenue() {
+
+    const visitors =
+        parseFloat(document.getElementById("visitors").value) || 0;
+
+    const pages =
+        parseFloat(document.getElementById("pages").value) || 0;
+
+    const rpm =
+        parseFloat(document.getElementById("rpm").value) || 0;
+
+
+    const pageviews = visitors * pages;
+
+    const revenue = (pageviews / 1000) * rpm;
+
+
+    document.getElementById("revenue").textContent =
+        "$" + revenue.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+
+
+    document.getElementById("details").textContent =
+        pageviews.toLocaleString("en-US") +
+        " estimated monthly pageviews";
+
+
+    document.getElementById("result").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
