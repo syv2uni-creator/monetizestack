@@ -13,7 +13,7 @@
     <title>MonetizeStack | Turn Website Traffic Into Revenue</title>
 
     <meta name="description"
-          content="MonetizeStack helps website owners turn traffic into revenue with practical guides, free calculators and website monetization strategies.">
+          content="MonetizeStack helps website owners turn website traffic into revenue with practical monetization guides, SEO resources and free calculators.">
 
     <style>
 
@@ -27,7 +27,7 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #111827;
             background: #ffffff;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .container {
@@ -77,11 +77,11 @@
         }
 
         .hero {
-            padding: 100px 0;
+            padding: 95px 0;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 820px;
         }
 
         .eyebrow {
@@ -103,7 +103,7 @@
         }
 
         .hero p {
-            max-width: 700px;
+            max-width: 720px;
             margin-bottom: 30px;
             color: #6b7280;
             font-size: 20px;
@@ -149,7 +149,7 @@
         }
 
         .section-heading {
-            max-width: 700px;
+            max-width: 720px;
             margin-bottom: 40px;
         }
 
@@ -165,7 +165,7 @@
             font-size: 17px;
         }
 
-        .tools-grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
@@ -185,6 +185,7 @@
         .card h3 {
             margin-bottom: 10px;
             font-size: 22px;
+            line-height: 1.3;
         }
 
         .card p {
@@ -203,11 +204,7 @@
             text-decoration: underline;
         }
 
-        .article-card {
-            max-width: 760px;
-        }
-
-        .article-label {
+        .label {
             margin-bottom: 10px;
             color: #2563eb;
             font-size: 12px;
@@ -216,43 +213,49 @@
             letter-spacing: 0.08em;
         }
 
-        .article-card h3 {
-            font-size: 28px;
-        }
-
-        .topics-grid {
+        .two-column {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
         .topic {
-            padding: 20px;
+            padding: 25px;
             border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #111827;
-            font-weight: 700;
+            border-radius: 12px;
         }
 
-        .topic:hover {
-            border-color: #2563eb;
+        .topic h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .topic p {
+            margin-bottom: 15px;
+            color: #6b7280;
+        }
+
+        .topic a {
             color: #2563eb;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
         }
 
-        .final-cta {
+        .cta {
             padding: 90px 0;
             background: #f8fafc;
             border-top: 1px solid #e5e7eb;
         }
 
-        .final-cta h2 {
+        .cta h2 {
             margin-bottom: 15px;
             font-size: 40px;
+            line-height: 1.15;
             letter-spacing: -0.03em;
         }
 
-        .final-cta p {
+        .cta p {
             max-width: 650px;
             margin-bottom: 25px;
             color: #6b7280;
@@ -268,12 +271,12 @@
 
         @media (max-width: 850px) {
 
-            .tools-grid {
+            .grid {
                 grid-template-columns: 1fr;
             }
 
-            .topics-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .two-column {
+                grid-template-columns: 1fr;
             }
 
             .nav-links {
@@ -290,10 +293,6 @@
 
             section {
                 padding: 60px 0;
-            }
-
-            .topics-grid {
-                grid-template-columns: 1fr;
             }
 
             h1 {
@@ -323,21 +322,23 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html">
-                        Home
-                    </a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="tools/index.html">
-                        Tools
-                    </a>
+                    <a href="#monetization">Monetization</a>
                 </li>
 
                 <li>
-                    <a href="articles/what-is-website-rpm.html">
-                        Guides
-                    </a>
+                    <a href="#traffic">SEO & Traffic</a>
+                </li>
+
+                <li>
+                    <a href="#tools">Tools</a>
+                </li>
+
+                <li>
+                    <a href="#guides">Guides</a>
                 </li>
 
             </ul>
@@ -369,9 +370,10 @@
                 </h1>
 
                 <p>
-                    Practical guides and free tools for website owners
-                    who want to understand traffic, improve monetization
-                    and build sustainable online revenue.
+                    Practical guides, calculators and strategies
+                    for website owners who want to understand
+                    traffic, improve monetization and build
+                    sustainable online revenue.
                 </p>
 
                 <div class="hero-buttons">
@@ -384,10 +386,10 @@
                     </a>
 
                     <a
-                        href="articles/what-is-website-rpm.html"
+                        href="articles/how-much-money-can-a-website-make.html"
                         class="button button-secondary"
                     >
-                        Read the Guides
+                        Start With a Guide
                     </a>
 
                 </div>
@@ -399,9 +401,171 @@
     </section>
 
 
+    <!-- MONETIZATION -->
+
+    <section id="monetization">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Website Monetization
+                </h2>
+
+                <p>
+                    Learn how website owners can turn traffic
+                    into advertising, affiliate and other revenue.
+                </p>
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <div class="card">
+
+                    <div class="label">
+                        Beginner Guide
+                    </div>
+
+                    <h3>
+                        How Much Money Can a Website Make?
+                    </h3>
+
+                    <p>
+                        Understand how traffic, pageviews and
+                        monetization rates affect website revenue.
+                    </p>
+
+                    <a href="articles/how-much-money-can-a-website-make.html">
+                        Read the Guide →
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="label">
+                        Strategy
+                    </div>
+
+                    <h3>
+                        How to Increase Website RPM
+                    </h3>
+
+                    <p>
+                        Practical ways to generate more revenue
+                        from the traffic you already have.
+                    </p>
+
+                    <a href="articles/how-to-increase-website-rpm.html">
+                        Read the Guide →
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="label">
+                        Advertising
+                    </div>
+
+                    <h3>
+                        How Website Ad Revenue Works
+                    </h3>
+
+                    <p>
+                        Learn how impressions, clicks, CPM, CPC
+                        and RPM affect advertising revenue.
+                    </p>
+
+                    <a href="articles/how-website-ad-revenue-works.html">
+                        Read the Guide →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRAFFIC -->
+
+    <section id="traffic">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>
+                    SEO & Traffic
+                </h2>
+
+                <p>
+                    Build useful traffic first, then learn how
+                    to turn that audience into revenue.
+                </p>
+
+            </div>
+
+
+            <div class="two-column">
+
+
+                <div class="topic">
+
+                    <h3>
+                        SEO Guides
+                    </h3>
+
+                    <p>
+                        Learn the fundamentals of search traffic,
+                        content strategy and website growth.
+                    </p>
+
+                    <a href="articles/how-much-money-can-a-website-make.html">
+                        Explore SEO Resources →
+                    </a>
+
+                </div>
+
+
+                <div class="topic">
+
+                    <h3>
+                        Traffic & Revenue
+                    </h3>
+
+                    <p>
+                        Understand how visitors, pageviews and
+                        engagement influence website earnings.
+                    </p>
+
+                    <a href="articles/how-many-visitors-to-make-100.html">
+                        See Traffic Examples →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- TOOLS -->
 
-    <section>
+    <section id="tools">
 
         <div class="container">
 
@@ -412,26 +576,30 @@
                 </h2>
 
                 <p>
-                    Use simple calculators to understand your
-                    website's revenue potential and monetization
-                    performance.
+                    Use simple calculators to estimate revenue,
+                    understand RPM and experiment with different
+                    traffic scenarios.
                 </p>
 
             </div>
 
 
-            <div class="tools-grid">
+            <div class="grid">
 
 
                 <div class="card">
+
+                    <div class="label">
+                        Free Calculator
+                    </div>
 
                     <h3>
                         Website Revenue Calculator
                     </h3>
 
                     <p>
-                        Estimate monthly revenue using visitors,
-                        pages per visitor and RPM.
+                        Estimate monthly website revenue using
+                        visitors, pages per visitor and RPM.
                     </p>
 
                     <a href="tools/index.html">
@@ -443,12 +611,17 @@
 
                 <div class="card">
 
+                    <div class="label">
+                        Free Calculator
+                    </div>
+
                     <h3>
                         RPM Calculator
                     </h3>
 
                     <p>
-                        Calculate revenue per 1,000 pageviews.
+                        Calculate revenue per 1,000 pageviews
+                        from your own numbers.
                     </p>
 
                     <a href="tools/rpm-calculator/index.html">
@@ -459,6 +632,10 @@
 
 
                 <div class="card">
+
+                    <div class="label">
+                        Free Calculator
+                    </div>
 
                     <h3>
                         Ad Revenue Calculator
@@ -483,90 +660,94 @@
     </section>
 
 
-    <!-- GUIDE -->
+    <!-- GUIDES -->
 
-    <section>
+    <section id="guides">
 
         <div class="container">
 
             <div class="section-heading">
 
                 <h2>
-                    Latest Guide
+                    Latest Monetization Guides
                 </h2>
 
                 <p>
-                    Practical explanations of the metrics and
-                    strategies behind website monetization.
+                    Start with the fundamentals and build your
+                    understanding step by step.
                 </p>
 
             </div>
 
 
-            <div class="card article-card">
+            <div class="grid">
 
-                <div class="article-label">
-                    Website Monetization
+
+                <div class="card">
+
+                    <div class="label">
+                        Fundamentals
+                    </div>
+
+                    <h3>
+                        What Is Website RPM?
+                    </h3>
+
+                    <p>
+                        Learn what RPM means and how to calculate
+                        revenue per 1,000 pageviews.
+                    </p>
+
+                    <a href="articles/what-is-website-rpm.html">
+                        Read the Guide →
+                    </a>
+
                 </div>
 
-                <h3>
-                    What Is Website RPM?
-                </h3>
 
-                <p>
-                    Learn what RPM means, how to calculate it,
-                    what affects it and how website owners can
-                    improve their revenue per 1,000 pageviews.
-                </p>
+                <div class="card">
 
-                <a href="articles/what-is-website-rpm.html">
-                    Read the Guide →
-                </a>
+                    <div class="label">
+                        Traffic
+                    </div>
 
-            </div>
+                    <h3>
+                        How Many Visitors Do You Need to Make $100?
+                    </h3>
 
-        </div>
+                    <p>
+                        Explore how traffic and RPM combine to
+                        produce a revenue target.
+                    </p>
 
-    </section>
+                    <a href="articles/how-many-visitors-to-make-100.html">
+                        Read the Guide →
+                    </a>
 
-
-    <!-- TOPICS -->
-
-    <section>
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <h2>
-                    Explore MonetizeStack
-                </h2>
-
-                <p>
-                    Learn about the main ways website owners can
-                    turn traffic into revenue.
-                </p>
-
-            </div>
+                </div>
 
 
-            <div class="topics-grid">
+                <div class="card">
 
-                <a href="#" class="topic">
-                    Monetization
-                </a>
+                    <div class="label">
+                        Traffic
+                    </div>
 
-                <a href="#" class="topic">
-                    SEO & Traffic
-                </a>
+                    <h3>
+                        How Many Visitors Do You Need to Make $1,000?
+                    </h3>
 
-                <a href="#" class="topic">
-                    Affiliate Marketing
-                </a>
+                    <p>
+                        Calculate the traffic required to reach
+                        different website revenue goals.
+                    </p>
 
-                <a href="tools/index.html" class="topic">
-                    Free Tools
-                </a>
+                    <a href="articles/how-many-visitors-to-make-1000.html">
+                        Read the Guide →
+                    </a>
+
+                </div>
+
 
             </div>
 
@@ -577,7 +758,7 @@
 
     <!-- CTA -->
 
-    <section class="final-cta">
+    <section class="cta">
 
         <div class="container">
 
@@ -595,7 +776,7 @@
                 href="tools/index.html"
                 class="button button-primary"
             >
-                Explore the Tools →
+                Explore the Free Tools →
             </a>
 
         </div>
