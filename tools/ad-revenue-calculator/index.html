@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ad Revenue Calculator | MonetizeStack</title>
+
+    <meta name="description"
+          content="Estimate website advertising revenue based on monthly pageviews and ad RPM with this free ad revenue calculator.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111827;
+            background: #f8fafc;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 0 auto;
+        }
+
+        nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .back-link {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            color: #2563eb;
+        }
+
+        main {
+            padding: 70px 0;
+        }
+
+        .intro {
+            max-width: 720px;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 12px;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 58px);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .calculator {
+            max-width: 700px;
+            padding: 32px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+        }
+
+        .field {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .hint {
+            margin-top: 6px;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            display: none;
+            margin-top: 30px;
+            padding: 28px;
+            background: #f8fafc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .result-label {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .result-value {
+            font-size: 46px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .result-details {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .explanation {
+            max-width: 720px;
+            margin-top: 60px;
+        }
+
+        .explanation h2 {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .explanation h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .explanation p {
+            margin-bottom: 18px;
+            color: #4b5563;
+        }
+
+        .formula {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #111827;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 40px 0;
+            border-top: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 50px 0;
+            }
+
+            .calculator {
+                padding: 22px;
+            }
+
+            .result-value {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="../../index.html" class="logo">
+                Monetize<span>Stack</span>
+            </a>
+
+            <a href="../../index.html" class="back-link">
+                ← Back to MonetizeStack
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="intro">
+
+            <span class="eyebrow">
+                Free Tool
+            </span>
+
+            <h1>
+                Ad Revenue Calculator
+            </h1>
+
+            <p>
+                Estimate your website's advertising revenue using
+                monthly pageviews and estimated ad RPM.
+            </p>
+
+        </div>
+
+
+        <div class="calculator">
+
+            <div class="field">
+
+                <label for="pageviews">
+                    Monthly Pageviews
+                </label>
+
+                <input
+                    type="number"
+                    id="pageviews"
+                    value="55000"
+                    min="0"
+                >
+
+                <div class="hint">
+                    Example: 55,000 monthly pageviews
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="rpm">
+                    Ad RPM ($)
+                </label>
+
+                <input
+                    type="number"
+                    id="rpm"
+                    value="12"
+                    min="0"
+                    step="0.01"
+                >
+
+                <div class="hint">
+                    Estimated advertising revenue per 1,000 pageviews
+                </div>
+
+            </div>
+
+
+            <button onclick="calculateAdRevenue()">
+                Calculate Ad Revenue
+            </button>
+
+
+            <div class="result" id="result">
+
+                <div class="result-label">
+                    Estimated Monthly Ad Revenue
+                </div>
+
+                <div class="result-value" id="revenue">
+                    $0.00
+                </div>
+
+                <div class="result-details" id="details"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="explanation">
+
+            <h2>
+                How is ad revenue calculated?
+            </h2>
+
+            <p>
+                A simple way to estimate advertising revenue is to
+                divide your pageviews by 1,000 and multiply the result
+                by your estimated ad RPM.
+            </p>
+
+            <div class="formula">
+                Estimated Ad Revenue = (Pageviews ÷ 1,000) × RPM
+            </div>
+
+            <h3>
+                Example
+            </h3>
+
+            <p>
+                If a website receives 55,000 pageviews per month and
+                generates a $12 RPM, the estimated advertising revenue
+                is $660 per month.
+            </p>
+
+            <h3>
+                Actual revenue can vary
+            </h3>
+
+            <p>
+                Advertising revenue depends on factors such as audience
+                location, niche, device type, traffic source, ad
+                placements, seasonality and the advertising network
+                being used.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 MonetizeStack. Turn Website Traffic Into Revenue.
+    </div>
+
+</footer>
+
+
+<script>
+
+function calculateAdRevenue() {
+
+    const pageviews =
+        parseFloat(document.getElementById("pageviews").value) || 0;
+
+    const rpm =
+        parseFloat(document.getElementById("rpm").value) || 0;
+
+
+    const revenue = (pageviews / 1000) * rpm;
+
+
+    document.getElementById("revenue").textContent =
+        "$" + revenue.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+
+
+    document.getElementById("details").textContent =
+        pageviews.toLocaleString("en-US") +
+        " pageviews × $" +
+        rpm.toLocaleString("en-US", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }) +
+        " RPM";
+
+
+    document.getElementById("result").style.display = "block";
+}
+
+</script>
+
+</body>
+
+</html>
