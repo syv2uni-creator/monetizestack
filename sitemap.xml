@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+    
     <url>
         <loc>https://syv2uni-creator.github.io/monetizestack/</loc>
     </url>
@@ -49,6 +49,10 @@
         <loc>https://syv2uni-creator.github.io/monetizestack/tools/website-revenue-calculator/index.html</loc>
     </url>
 
+    <url>
+    <loc>https://syv2uni-creator.github.io/monetizestack/articles/how-to-monetize-a-website.html</loc>
+</url>
+    
     <url>
         <loc>https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/index.html</loc>
     </url>
