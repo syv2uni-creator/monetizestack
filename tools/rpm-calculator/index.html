@@ -1,448 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Website RPM Calculator | MonetizeStack</title>
-
-    <meta name="description"
-          content="Calculate your website RPM using revenue and pageviews with this free Website RPM Calculator from MonetizeStack.">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #111827;
-            background: #f8fafc;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .container {
-            width: min(1000px, 92%);
-            margin: 0 auto;
-        }
-
-        nav {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            text-decoration: none;
-            color: #111827;
-        }
-
-        .logo span {
-            color: #2563eb;
-        }
-
-        .back-link {
-            color: #4b5563;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .back-link:hover {
-            color: #2563eb;
-        }
-
-        main {
-            padding: 70px 0;
-        }
-
-        .intro {
-            max-width: 700px;
-            margin-bottom: 40px;
-        }
-
-        .eyebrow {
-            color: #2563eb;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        h1 {
-            font-size: clamp(38px, 6vw, 58px);
-            line-height: 1.1;
-            letter-spacing: -0.04em;
-            margin-bottom: 18px;
-        }
-
-        .intro p {
-            color: #6b7280;
-            font-size: 18px;
-        }
-
-        .calculator {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
-            padding: 32px;
-            max-width: 700px;
-        }
-
-        .field {
-            margin-bottom: 24px;
-        }
-
-        label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #2563eb;
-        }
-
-        .hint {
-            color: #6b7280;
-            font-size: 13px;
-            margin-top: 6px;
-        }
-
-        button {
-            width: 100%;
-            border: none;
-            border-radius: 8px;
-            padding: 15px;
-            background: #2563eb;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #1d4ed8;
-        }
-
-        .result {
-            margin-top: 30px;
-            padding: 28px;
-            background: #f8fafc;
-            border-radius: 10px;
-            text-align: center;
-            display: none;
-        }
-
-        .result-label {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .result-value {
-            font-size: 46px;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-        }
-
-        .result-details {
-            margin-top: 10px;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        .explanation {
-            max-width: 700px;
-            margin-top: 60px;
-        }
-
-        .explanation h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .explanation h3 {
-            font-size: 22px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        .explanation p {
-            color: #4b5563;
-            margin-bottom: 18px;
-        }
-
-        .formula {
-            background: #111827;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 25px 0;
-            font-family: monospace;
-            font-size: 15px;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding: 40px 0;
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        @media (max-width: 600px) {
-            main {
-                padding: 50px 0;
-            }
-
-            .calculator {
-                padding: 22px;
-            }
-
-            .result-value {
-                font-size: 36px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <div class="container">
-        <nav>
-
-            <a href="../../index.html" class="logo">
-                Monetize<span>Stack</span>
-            </a>
-
-            <a href="../../index.html" class="back-link">
-                ← Back to MonetizeStack
-            </a>
-
-        </nav>
-    </div>
-</header>
-
-
-<main>
-
-    <div class="container">
-
-        <div class="intro">
-
-            <span class="eyebrow">
-                Free Tool
-            </span>
-
-            <h1>
-                Website RPM Calculator
-            </h1>
-
-            <p>
-                Calculate your website's revenue per 1,000 pageviews
-                using your revenue and total pageviews.
-            </p>
-
-        </div>
-
-
-        <div class="calculator">
-
-            <div class="field">
-
-                <label for="revenue">
-                    Revenue ($)
-                </label>
-
-                <input
-                    type="number"
-                    id="revenue"
-                    value="660"
-                    min="0"
-                    step="0.01"
-                >
-
-                <div class="hint">
-                    Example: $660 in monthly website revenue
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="pageviews">
-                    Pageviews
-                </label>
-
-                <input
-                    type="number"
-                    id="pageviews"
-                    value="55000"
-                    min="0"
-                >
-
-                <div class="hint">
-                    Total pageviews during the same period
-                </div>
-
-            </div>
-
-
-            <button onclick="calculateRPM()">
-                Calculate RPM
-            </button>
-
-
-            <div class="result" id="result">
-
-                <div class="result-label">
-                    Your Website RPM
-                </div>
-
-                <div class="result-value" id="rpm">
-                    $0.00
-                </div>
-
-                <div class="result-details" id="details"></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="explanation">
-
-            <h2>
-                What is website RPM?
-            </h2>
-
-            <p>
-                RPM stands for revenue per mille. In website
-                monetization, RPM is commonly used to describe
-                how much revenue a website generates per 1,000
-                pageviews.
-            </p>
-
-            <div class="formula">
-                RPM = Revenue ÷ Pageviews × 1,000
-            </div>
-
-            <h3>
-                Example
-            </h3>
-
-            <p>
-                If your website earns $660 from 55,000 pageviews,
-                your RPM is $12.
-            </p>
-
-            <p>
-                RPM can vary significantly depending on your
-                audience, traffic source, geographic location,
-                niche, device mix, ad placements and monetization
-                method.
-            </p>
-
-            <h3>
-                Why does RPM matter?
-            </h3>
-
-            <p>
-                RPM gives website owners a simple way to compare
-                monetization performance over time. If your traffic
-                stays the same but your RPM increases, your website
-                is generating more revenue from the same amount of
-                traffic.
-            </p>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-<footer>
-    <div class="container">
-        © 2026 MonetizeStack. Turn Website Traffic Into Revenue.
-    </div>
-</footer>
-
-
-<script>
-
-function calculateRPM() {
-
-    const revenue =
-        parseFloat(document.getElementById("revenue").value) || 0;
-
-    const pageviews =
-        parseFloat(document.getElementById("pageviews").value) || 0;
-
-
-    if (pageviews <= 0) {
-
-        document.getElementById("rpm").textContent = "$0.00";
-
-        document.getElementById("details").textContent =
-            "Enter more than 0 pageviews.";
-
-        document.getElementById("result").style.display = "block";
-
-        return;
-    }
-
-
-    const rpm = (revenue / pageviews) * 1000;
-
-
-    document.getElementById("rpm").textContent =
-        "$" + rpm.toLocaleString("en-US", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        });
-
-
-    document.getElementById("details").textContent =
-        "$" + revenue.toLocaleString("en-US", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        }) +
-        " revenue from " +
-        pageviews.toLocaleString("en-US") +
-        " pageviews";
-
-
-    document.getElementById("result").style.display = "block";
-}
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website RPM Calculator | Calculate & Compare RPM | MonetizeStack</title>
+<meta name="description" content="Calculate website RPM from revenue and pageviews. Compare RPM scenarios and see how higher RPM could change monthly and annual website revenue.">
+<link rel="canonical" href="https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/">
+<meta property="og:title" content="Website RPM Calculator | MonetizeStack">
+<meta property="og:description" content="Calculate website RPM from revenue and pageviews and explore higher-RPM scenarios.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Website RPM Calculator","url":"https://syv2uni-creator.github.io/monetizestack/tools/rpm-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","description":"Calculate website revenue per 1,000 pageviews and compare RPM scenarios.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
-
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;color:#111827;background:#fff;line-height:1.6}.container{width:min(1000px,92%);margin:auto}header{border-bottom:1px solid #e5e7eb}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:24px;font-weight:800;text-decoration:none;color:#111827}.logo span{color:#2563eb}.back{color:#4b5563;text-decoration:none;font-size:14px;font-weight:700}.back:hover{color:#2563eb}main{padding:64px 0}.eyebrow{margin-bottom:12px;color:#2563eb;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}h1{margin-bottom:16px;font-size:clamp(38px,6vw,58px);line-height:1.05;letter-spacing:-.04em}.intro{max-width:760px;margin-bottom:36px;color:#6b7280;font-size:18px}.calculator{padding:32px;border:1px solid #e5e7eb;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.05)}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.field{margin-bottom:4px}label{display:block;margin-bottom:8px;font-weight:700}input{width:100%;padding:14px 15px;border:1px solid #d1d5db;border-radius:8px;font-size:16px}input:focus{outline:3px solid rgba(37,99,235,.12);border-color:#2563eb}.hint{margin-top:6px;color:#6b7280;font-size:13px}button{width:100%;margin-top:24px;padding:15px 20px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-size:16px;font-weight:800;cursor:pointer}button:hover{background:#1d4ed8}.error{display:none;color:#b91c1c;font-size:14px;margin-top:10px}.result{display:none;margin-top:28px}.hero{padding:30px;border-radius:14px;background:#f8fafc;text-align:center}.label{color:#6b7280;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.value{margin:5px 0;font-size:clamp(40px,7vw,56px);font-weight:800;letter-spacing:-.04em}.details{color:#6b7280;font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}.card{padding:20px;border:1px solid #e5e7eb;border-radius:12px}.card h3{font-size:14px;margin-bottom:4px}.amount{font-size:25px;font-weight:800}.card p{font-size:13px;color:#6b7280}.insights{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}.insight{padding:20px;background:#f8fafc;border-radius:12px}.insight strong{display:block;font-size:22px}.info{max-width:820px;margin-top:52px}.info h2{margin:34px 0 12px;font-size:30px}.info h2:first-child{margin-top:0}.info h3{margin:25px 0 8px;font-size:21px}.info p{margin-bottom:16px;color:#4b5563}.formula{padding:18px 20px;margin:18px 0;background:#f8fafc;border-left:4px solid #2563eb;border-radius:8px;font-weight:700}.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.links a{color:#2563eb;font-weight:700;text-decoration:none}.faq{border-top:1px solid #e5e7eb;padding:18px 0}.faq h3{font-size:17px;margin-bottom:5px}.faq p{margin:0}.note{font-size:13px;color:#6b7280}footer{padding:40px 0;border-top:1px solid #e5e7eb;color:#6b7280;font-size:14px;margin-top:40px}@media(max-width:700px){main{padding:48px 0}.grid,.cards,.insights{grid-template-columns:1fr}.calculator{padding:22px}.logo{font-size:21px}.back{font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="container"><nav><a href="../../index.html" class="logo">Monetize<span>Stack</span></a><a href="../index.html" class="back">← All Tools</a></nav></div></header>
+<main><div class="container">
+<div class="eyebrow">Free RPM Tool</div>
+<h1>Website RPM Calculator</h1>
+<p class="intro">Calculate revenue per 1,000 pageviews from your website revenue and pageviews. Then compare lower and higher RPM scenarios to understand the impact on your earnings.</p>
+<section class="calculator" aria-label="Website RPM calculator">
+<div class="grid">
+<div class="field"><label for="revenue">Revenue ($)</label><input id="revenue" type="number" inputmode="decimal" value="660" min="0" step="0.01"><div class="hint">Revenue earned during the same period</div></div>
+<div class="field"><label for="pageviews">Pageviews</label><input id="pageviews" type="number" inputmode="numeric" value="55000" min="0" step="1"><div class="hint">Total pageviews during that period</div></div>
+</div>
+<div id="error" class="error" role="alert">Enter revenue of zero or greater and more than 0 pageviews.</div>
+<button type="button" onclick="calculateRPM()">Calculate RPM</button>
+<div class="result" id="result" aria-live="polite">
+<div class="hero"><div class="label">Your Website RPM</div><div class="value" id="rpm">$0.00</div><div class="details" id="details"></div></div>
+<div class="cards"><div class="card"><h3>Lower RPM</h3><div class="amount" id="low">$0</div><p>50% of your current RPM</p></div><div class="card"><h3>Current RPM</h3><div class="amount" id="current">$0</div><p>Your calculated RPM</p></div><div class="card"><h3>Higher RPM</h3><div class="amount" id="high">$0</div><p>150% of your current RPM</p></div></div>
+<div class="insights"><div class="insight"><span>Revenue at +20% RPM</span><strong id="plus20">$0</strong><small>for the same pageviews</small></div><div class="insight"><span>Revenue at +50% RPM</span><strong id="plus50">$0</strong><small>for the same pageviews</small></div></div>
+</div>
+</section>
+<section class="info">
+<h2>What Is Website RPM?</h2>
+<p>RPM stands for revenue per mille, meaning revenue per 1,000 pageviews. It is a useful metric for comparing website monetization performance even when sites have different traffic volumes.</p>
+<div class="formula">RPM = Revenue ÷ Pageviews × 1,000</div>
+<h3>Example</h3><p>If a website earns $660 from 55,000 pageviews, its RPM is $12. That means the site generated an estimated $12 for every 1,000 pageviews during that period.</p>
+<h2>Why Does RPM Matter?</h2>
+<p>If traffic stays constant while RPM increases, revenue increases without requiring additional pageviews. RPM can therefore help website owners evaluate ad optimization, audience quality and other monetization changes.</p>
+<h2>What Affects Website RPM?</h2>
+<p>RPM can vary by niche, audience geography, device mix, traffic source, seasonality, ad demand, ad placements and monetization method. There is no universal RPM that every website should expect.</p>
+<h2>Related Tools</h2><div class="links"><a href="../website-revenue-calculator/index.html">Website Revenue Calculator →</a><a href="../ad-revenue-calculator/index.html">Ad Revenue Calculator →</a><a href="../affiliate-revenue-calculator/index.html">Affiliate Revenue Calculator →</a><a href="../traffic-growth-calculator/index.html">Traffic Growth Calculator →</a></div>
+<h2>Frequently Asked Questions</h2>
+<div class="faq"><h3>Is RPM the same as CPM?</h3><p>No. CPM generally refers to advertiser cost per 1,000 ad impressions, while RPM is a publisher-side revenue metric and can be based on pageviews or another defined unit.</p></div>
+<div class="faq"><h3>What is a good website RPM?</h3><p>There is no single benchmark that applies to every site. Compare your RPM over time and against comparable sites with similar audiences and monetization models.</p></div>
+<div class="faq"><h3>Can I use this calculator for monthly revenue?</h3><p>Yes. Enter your revenue and pageviews from the same month or other matching period. The calculator converts the result to revenue per 1,000 pageviews.</p></div>
+<p class="note">Planning tool only. RPM estimates are not guarantees or financial advice.</p>
+</section>
+</div></main>
+<footer><div class="container">© 2026 MonetizeStack. Turn Website Traffic Into Revenue.</div></footer>
+<script>
+function money(v){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(v)}
+function calculateRPM(){
+ const revenue=parseFloat(document.getElementById('revenue').value); const pageviews=parseFloat(document.getElementById('pageviews').value); const error=document.getElementById('error');
+ if(!Number.isFinite(revenue)||!Number.isFinite(pageviews)||revenue<0||pageviews<=0){error.style.display='block';document.getElementById('result').style.display='none';return}
+ error.style.display='none'; const rpm=(revenue/pageviews)*1000;
+ document.getElementById('rpm').textContent=money(rpm); document.getElementById('details').textContent=money(revenue)+' revenue from '+pageviews.toLocaleString('en-US')+' pageviews';
+ document.getElementById('low').textContent=money(rpm*.5); document.getElementById('current').textContent=money(rpm); document.getElementById('high').textContent=money(rpm*1.5);
+ document.getElementById('plus20').textContent=money(revenue*1.2); document.getElementById('plus50').textContent=money(revenue*1.5); document.getElementById('result').style.display='block';
+}
+calculateRPM();
+</script>
 </body>
 </html>
